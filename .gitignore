@@ -7,4 +7,5 @@ node_modules
 *.key
 *.crt
 *.pem
+*.csr
 redis/ssl/*
