@@ -7,7 +7,6 @@ import morgan from 'morgan'
 
 const app : Application = express()
 
-
 app.use(cors())
 
 app.use(express.json())
