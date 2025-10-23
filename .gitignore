@@ -4,12 +4,7 @@ node_modules
 
 /src/generated/prisma
 
-ca.crt
-
-ca.key
-
-redis.crt
-
-redis.csr
-
-redis.key
+*.key
+*.crt
+*.pem
+redis/ssl/*
