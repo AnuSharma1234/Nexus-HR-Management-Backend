@@ -3,12 +3,15 @@ import app from "./app";
 import logger from "./utils/logger.util";
 import connectMongoDb from "./database/mongodb/connect.db";
 import prisma from "./database/postgres/prisma.client";
+import client from "./database/redis/redis.client";
 
 app.listen(PORT, async () => {
     try{
         await connectMongoDb()
         await prisma.$connect()
         logger.info(`Connected to PostgreSQL Succesfully`)
+        await client.connect()
+        logger.info(`Connected to Redis server Succesfully`)
         logger.info(`Server started at http://localhost:${PORT}`)
     }catch(error){
         logger.error(error)
